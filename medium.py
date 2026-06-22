@@ -49,7 +49,7 @@ def four():
 def five():
     numbers = [1, 4, 7, 4, 2, 8, 9, 7, 4]
     largest = numbers[0]
-    second_largest = numbers[0]
+    second_largest = float('-inf')
 
     for number in numbers:
         if number > largest:
@@ -74,29 +74,33 @@ def six(number):
 
 def seven():
     number = 81
-    i = 1
+    is_square = False
 
-    while i * i < number:
-        i = i + 1
+    for i in range(1, number + 1):
+        if i * i == number:
+            is_square = True
+            break  
 
-    if i * i == number:
-        print(True)
-    else:
-        print(False)
+    print(is_square)
 
 
-def eight(limit):
+def eight():
     total = 0
+    number = 2
 
-    for number in range(2, limit + 1):
+    while number <= 100:  
         is_prime = True
+        divisor = 2
 
-        for divisor in range(2, number):
+        while divisor < number:  
             if number % divisor == 0:
                 is_prime = False
+                break
+            divisor = divisor + 1
 
         if is_prime:
             total = total + number
+        number = number + 1
 
     print(total)
 
@@ -119,12 +123,17 @@ def nine():
 
 def ten():
     list_one = [1, 4, 7, 4, 2, 8, 9, 7, 4]
-    list_two = [3, 4, 5, 6, 7]
+    list_two = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
+    printed_elements = []  
     index = 0
 
     while index < len(list_one):
-        if list_one[index] in list_two:
-            print(list_one[index])
+        current = list_one[index]
+        if current in list_two and current not in printed_elements:
+            print(current)
+            printed_elements.append(current) 
 
         index = index + 1
+
+

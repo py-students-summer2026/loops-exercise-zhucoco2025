@@ -64,9 +64,15 @@ def four():
 
 def five():
     numbers = [1, 4, 7, 4, 2, 8, 9, 7, 4]
-    numbers.sort()
-
+    
     length = len(numbers)
+    for i in range(length):
+        for j in range(0, length - i - 1):
+            if numbers[j] > numbers[j + 1]:
+
+                temp = numbers[j]
+                numbers[j] = numbers[j + 1]
+                numbers[j + 1] = temp
 
     if length % 2 == 1:
         middle_index = length // 2

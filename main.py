@@ -25,23 +25,23 @@ def do_medium():
     # medium.five()
     # medium.six(8)
     # medium.seven()
-    # medium.eight(24)
+    # medium.eight()
     # medium.nine()
     # medium.ten()
     pass # do nothing
 
 def do_difficult():
     # "difficult" problems
-    difficult.one()
-    difficult.two()
-    difficult.three()
-    difficult.four()
+    # difficult.one()
+    # difficult.two()
+    # difficult.three()
+    # difficult.four()
     difficult.five()
-    difficult.six(6)
-    difficult.seven()
-    difficult.eight()
-    difficult.nine()
-    difficult.ten()
+    # difficult.six(6)
+    # difficult.seven()
+    # difficult.eight()
+    # difficult.nine()
+    # difficult.ten()
     # pass # do nothing
 
 def main():
